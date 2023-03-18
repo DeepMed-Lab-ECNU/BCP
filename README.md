@@ -29,7 +29,7 @@ while for Pancreas testing, there is a individual function `test_model` in `trai
 Our code is based on [SS-Net](https://github.com/ycwu1997/SS-Net) and [CoraNet](https://github.com/koncle/CoraNet). Thanks for these authors for their valuable works and hope our model can promote the relevant research as well.
 
 ## Questions
-If you have any questions, welcome contact me at '[51215904056@stu.ecnu.edu.cn](51215904056@stu.ecnu.edu.cn)'
+If you have any questions, welcome contact me at '51215904056@stu.ecnu.edu.cn'
 
 
 

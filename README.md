@@ -1,7 +1,7 @@
 # Bidirectional Copy-Paste for Semi-Supervised Medical Image Segmentation (CVPR 2023)
 by Yunhao Bai, Duowen Chen, Qingli Li, Wei Shen, and Yan Wang.
 ## Introduction
-Official code for "Bidirectional Copy-Paste for Semi-Supervised Medical Image Segmentation". (CVPR 2023)
+Official code for "[Bidirectional Copy-Paste for Semi-Supervised Medical Image Segmentation](https://arxiv.org/abs/2305.00673)". (CVPR 2023)
 ## Requirements
 This repository is based on PyTorch 1.8.0, CUDA 11.1 and Python 3.6.13. All experiments in our paper were conducted on NVIDIA GeForce RTX 3090 GPU with an identical experimental setting.
 ## Usage

@@ -461,10 +461,10 @@ if __name__ == "__main__":
     shutil.copy('../LA&ACDC/ACDC_BCP_train.py', self_snapshot_path)
 
     #Pre_train
-    # logging.basicConfig(filename=pre_snapshot_path+"/log.txt", level=logging.INFO, format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')
-    # logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
-    # logging.info(str(args))
-    # pre_train(args, pre_snapshot_path)
+    logging.basicConfig(filename=pre_snapshot_path+"/log.txt", level=logging.INFO, format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')
+    logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
+    logging.info(str(args))
+    pre_train(args, pre_snapshot_path)
 
     #Self_train
     logging.basicConfig(filename=self_snapshot_path+"/log.txt", level=logging.INFO, format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')

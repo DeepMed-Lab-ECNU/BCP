@@ -17,8 +17,8 @@ python ./code/ACDC_BCP_train.py  #for ACDC training
 
 To test a model,
 ```
-python ./code/LA&ACDC/test_LA.py  #for LA testing
-python ./code/LA&ACDC/test_ACDC.py  #for ACDC testing
+python ./code/test_LA.py  #for LA testing
+python ./code/test_ACDC.py  #for ACDC testing
 ```
 
 ## Citation

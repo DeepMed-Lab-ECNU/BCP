@@ -458,7 +458,7 @@ if __name__ == "__main__":
     for snapshot_path in [pre_snapshot_path, self_snapshot_path]:
         if not os.path.exists(snapshot_path):
             os.makedirs(snapshot_path)
-    shutil.copy('../ACDC_BCP_train.py', self_snapshot_path)
+    shutil.copy('../code/ACDC_BCP_train.py', self_snapshot_path)
 
     #Pre_train
     logging.basicConfig(filename=pre_snapshot_path+"/log.txt", level=logging.INFO, format='[%(asctime)s.%(msecs)03d] %(message)s', datefmt='%H:%M:%S')

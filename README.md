@@ -23,6 +23,22 @@ python ./code/test_ACDC.py  #for ACDC testing
 
 ## Citation
 
+If you find these projects useful, please consider citing:
+
+```bibtex
+@article{DBLP:journals/corr/abs-2305-00673,
+  author       = {Yunhao Bai and
+                  Duowen Chen and
+                  Qingli Li and
+                  Wei Shen and
+                  Yan Wang},
+  title        = {Bidirectional Copy-Paste for Semi-Supervised Medical Image Segmentation},
+  journal      = {CoRR},
+  volume       = {abs/2305.00673},
+  year         = {2023}
+}
+```
+
 ## Acknowledgements
 Our code is largely based on [SS-Net](https://github.com/ycwu1997/SS-Net). Thanks for these authors for their valuable work, hope our work can also contribute to related research.
 

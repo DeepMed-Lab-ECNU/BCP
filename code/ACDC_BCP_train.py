@@ -193,7 +193,7 @@ def patients_to_slices(dataset, patiens_num):
 def pre_train(args, snapshot_path):
     base_lr = args.base_lr
     num_classes = args.num_classes
-    max_iterations = args.max_iterations
+    max_iterations = args.pre_iterations
     os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
     pre_trained_model = os.path.join(pre_snapshot_path,'{}_best_model.pth'.format(args.model))
     labeled_sub_bs, unlabeled_sub_bs = int(args.labeled_bs/2), int((args.batch_size-args.labeled_bs) / 2)

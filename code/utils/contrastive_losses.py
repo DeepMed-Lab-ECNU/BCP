@@ -13,7 +13,7 @@ def contrastive_class_to_class_learned_memory(model, features, class_labels, num
         to take part in the contrastive learning optimization
         features: Nx256  feature vectors for the contrastive learning (after applying the projection and prediction head)
         class_labels: N corresponding class labels for every feature vector
-        num_classes: number of classesin the dataet
+        num_classes: number of classes in the dataset
         memory: memory bank [List]
 
     Returns:
@@ -22,7 +22,7 @@ def contrastive_class_to_class_learned_memory(model, features, class_labels, num
 
     loss = 0
     for c in range(num_classes):
-        # get features of an specific class
+        # get features of a specific class
         mask_c = class_labels == c
         features_c = features[mask_c,:]
         memory_c = memory[c] # N, 256
@@ -50,7 +50,7 @@ def contrastive_class_to_class_learned_memory(model, features, class_labels, num
             learned_weights_features = selector(features_c.detach()) # detach for trainability
             learned_weights_features_memory = selector_memory(memory_c)
 
-            # self-atention in the memory featuers-axis and on the learning contrsative featuers-axis
+            # self-attention in the memory features-axis and on the learning contrastive features-axis
             learned_weights_features = torch.sigmoid(learned_weights_features)
             rescaled_weights = (learned_weights_features.shape[0] / learned_weights_features.sum(dim=0)) * learned_weights_features
             rescaled_weights = rescaled_weights.repeat(1, distances.shape[1])

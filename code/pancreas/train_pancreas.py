@@ -54,7 +54,7 @@ def pretrain(net1, optimizer, lab_loader_a, labe_loader_b, test_loader):
     save_path = Path(result_dir) / 'pretrain'
     save_path.mkdir(exist_ok=True)
 
-    """Creeate logger and measures"""
+    """Create logger and measures"""
     global logger
     logger, writer = cutmix_config_log(save_path, tensorboard=True)
     logger.info("cutmix Pretain, patch_size: {}, save path: {}".format(patch_size, str(save_path)))
@@ -143,7 +143,7 @@ def ema_cutmix(net, ema_net, optimizer, lab_loader_a, lab_loader_b, unlab_loader
         ema_net.train()
         for step, ((img_a, lab_a), (img_b, lab_b), (unimg_a, unlab_a), (unimg_b, unlab_b)) in enumerate(zip(lab_loader_a, lab_loader_b, unlab_loader_a, unlab_loader_b)):
             img_a, lab_a, img_b, lab_b, unimg_a, unlab_a, unimg_b, unlab_b = to_cuda([img_a, lab_a, img_b, lab_b, unimg_a, unlab_a, unimg_b, unlab_b])
-            """Generate Pesudo Label"""
+            """Generate Pseudo Label"""
             with torch.no_grad():
                 unimg_a_out = ema_net(unimg_a)[0]
                 unimg_b_out = ema_net(unimg_b)[0]

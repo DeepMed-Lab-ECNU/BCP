@@ -43,7 +43,7 @@ class DownBlock(nn.Module):
 
 
 class UpBlock(nn.Module):
-    """Upssampling followed by ConvBlock"""
+    """Upsampling followed by ConvBlock"""
     def __init__(self, in_channels1, in_channels2, out_channels, dropout_p):
         super(UpBlock, self).__init__()
         self.conv1x1 = nn.Conv2d(in_channels1, in_channels2, kernel_size=1)

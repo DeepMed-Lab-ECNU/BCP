@@ -57,7 +57,7 @@ def pretrain(net1, optimizer, lab_loader_a, labe_loader_b, test_loader):
     """Create logger and measures"""
     global logger
     logger, writer = cutmix_config_log(save_path, tensorboard=True)
-    logger.info("cutmix Pretain, patch_size: {}, save path: {}".format(patch_size, str(save_path)))
+    logger.info("cutmix Pretrain, patch_size: {}, save path: {}".format(patch_size, str(save_path)))
 
     max_dice = 0
     measures = CutPreMeasures(writer, logger)

@@ -137,7 +137,7 @@ def pre_train(args, snapshot_path):
 
     model.train()
     writer = SummaryWriter(snapshot_path+'/log')
-    logging.info("{} itertations per epoch".format(len(trainloader)))
+    logging.info("{} iterations per epoch".format(len(trainloader)))
     iter_num = 0
     best_dice = 0
     max_epoch = pre_max_iterations // len(trainloader) + 1
@@ -224,7 +224,7 @@ def self_train(args, pre_snapshot_path, self_snapshot_path):
     model.train()
     ema_model.train()
     writer = SummaryWriter(self_snapshot_path+'/log')
-    logging.info("{} itertations per epoch".format(len(trainloader)))
+    logging.info("{} iterations per epoch".format(len(trainloader)))
     iter_num = 0
     best_dice = 0
     max_epoch = self_max_iterations // len(trainloader) + 1
@@ -352,7 +352,7 @@ if __name__ == "__main__":
     ## make logger file
     pre_snapshot_path = "./model/BCP/LA_{}_{}_labeled/pre_train".format(args.exp, args.labelnum)
     self_snapshot_path = "./model/BCP/LA_{}_{}_labeled/self_train".format(args.exp, args.labelnum)
-    print("Strating BCP training.")
+    print("Starting BCP training.")
     for snapshot_path in [pre_snapshot_path, self_snapshot_path]:
         if not os.path.exists(snapshot_path):
             os.makedirs(snapshot_path)

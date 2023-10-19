@@ -4,6 +4,8 @@ by Yunhao Bai, Duowen Chen, Qingli Li, Wei Shen, and Yan Wang.
 Official code for "[Bidirectional Copy-Paste for Semi-Supervised Medical Image Segmentation](https://arxiv.org/abs/2305.00673)". (CVPR 2023)
 ## Requirements
 This repository is based on PyTorch 1.8.0, CUDA 11.1 and Python 3.6.13. All experiments in our paper were conducted on NVIDIA GeForce RTX 3090 GPU with an identical experimental setting.
+## News
+We provide NIH-Pancreas dataset codes, data split (and other information) could be got at [CoraNet](https://github.com/koncle/CoraNet)
 ## Usage
 We provide `code`, `data_split` and `models` for LA and ACDC dataset.
 

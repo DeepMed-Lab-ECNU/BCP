@@ -5,7 +5,7 @@ Official code for "[Bidirectional Copy-Paste for Semi-Supervised Medical Image S
 ## Requirements
 This repository is based on PyTorch 1.8.0, CUDA 11.1 and Python 3.6.13. All experiments in our paper were conducted on NVIDIA GeForce RTX 3090 GPU with an identical experimental setting.
 ## News
-We provide NIH-Pancreas dataset codes, data split (and other information) could be got at [CoraNet](https://github.com/koncle/CoraNet)
+We provide NIH-Pancreas dataset codes `code/pancreas`, data split (and other information) could be got at [CoraNet](https://github.com/koncle/CoraNet)
 ## Usage
 We provide `code`, `data_split` and `models` for LA and ACDC dataset.
 

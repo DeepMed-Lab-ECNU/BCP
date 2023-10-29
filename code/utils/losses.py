@@ -89,14 +89,6 @@ class DiceLoss(nn.Module):
         output_tensor = torch.cat(tensor_list, dim=1)
         return output_tensor.float()
 
-    def _one_hot_mask_encoder(self, input_tensor):
-        tensor_list = []
-        for i in range(self.n_classes):
-            temp_prob = input_tensor * i == i * torch.ones_like(input_tensor)
-            tensor_list.append(temp_prob)
-        output_tensor = torch.cat(tensor_list, dim=1)
-        return output_tensor.float()
-
     def _dice_loss(self, score, target):
         target = target.float()
         smooth = 1e-10
@@ -128,7 +120,8 @@ class DiceLoss(nn.Module):
         class_wise_dice = []
         loss = 0.0
         if mask is not None:
-            mask = self._one_hot_mask_encoder(mask)
+            # bug found by @CamillerFerros at github issue#25
+            mask = mask.repeat(1, self.n_classes, 1, 1).type(torch.float32)
             for i in range(0, self.n_classes): 
                 dice = self._dice_mask_loss(inputs[:, i], target[:, i], mask[:, i])
                 class_wise_dice.append(1.0 - dice.item())

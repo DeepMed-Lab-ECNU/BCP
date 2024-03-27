@@ -7,7 +7,7 @@ This repository is based on PyTorch 1.8.0, CUDA 11.1 and Python 3.6.13. All expe
 ## News
 2024/3/27 
 
-1.Many issues interests in KDE plot, we provide `code/KDE_demo.py` to show how we draw the KDE distribution.
+1.Many issues interest in KDE plot, we provide `code/KDE_demo.py` to show how we draw the KDE distribution.
 
 2.We provide BCP model parameters trained on 20% NIH-Pancreas. 链接: https://pan.baidu.com/s/1kGqRsEF4BX_yChKV3kMNVQ?pwd=hsjb 提取码: hsjb 
 

@@ -6,9 +6,13 @@ Official code for "[Bidirectional Copy-Paste for Semi-Supervised Medical Image S
 This repository is based on PyTorch 1.8.0, CUDA 11.1 and Python 3.6.13. All experiments in our paper were conducted on NVIDIA GeForce RTX 3090 GPU with an identical experimental setting.
 ## News
 2024/3/27 
+
 1.Many issues interests in KDE plot, we provide 'code/KDE_demo.py' to show how we drow the KDE distribution.
+
 2.We provide BCP model parameters trained on 20% NIH-Pancreas. 链接: https://pan.baidu.com/s/1kGqRsEF4BX_yChKV3kMNVQ?pwd=hsjb 提取码: hsjb 
+
 2023/07 
+
 We provide NIH-Pancreas dataset codes `code/pancreas`, data split (and other information) could be got at [CoraNet](https://github.com/koncle/CoraNet)
 ## Usage
 We provide `code`, `data_split` and `models` for LA and ACDC dataset.

@@ -134,7 +134,7 @@ def Inference(FLAGS):
             label_batch = label_batch.detach().cpu().numpy()
 
             # What is "BCP_feature" below?
-            # In our experiments, BCP_feature is logit before the last out_conv of the Decoder,
+            # In our experiments, BCP_feature is x8_up of the Decoder,
             # here are simple pseudo code for example:
 
             #   class Decoder:
@@ -142,9 +142,14 @@ def Inference(FLAGS):
             #       ...
             #
             #       def forward(self, x):
+            #       x8_up = x8_up + x1
+            #       x9 = self.block_nine(x8_up)
+            #       x9 = F.dropout3d(x9, p=0.5, training=True)
+            #       if self.has_dropout:
+            #           x9 = self.dropout(x9)
             #           ...
             #           out_seg = self.out_conv(x9)
-            #           return out_seg, x9 
+            #           return out_seg, x8_up
 
             #   class VNet:
             #
